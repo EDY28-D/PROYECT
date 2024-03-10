@@ -1,0 +1,20 @@
+development:
+  clients:
+    default:
+      uri: mongodb+srv://dsoftware:HXomOpXna4bLrsTw@cluster0.gv1wuas.mongodb.net/rails_development_mongo
+      options:
+        retry_writes: true
+  options:
+    use_activesupport_time_zone: true
+    use_utc: false
+
+test:
+  clients:
+    default:
+      database: mongo_test
+      hosts:
+        - localhost:27017
+      options:
+        read:
+          mode: :primary
+        max_pool_size: 1
