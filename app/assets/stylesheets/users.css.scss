@@ -1,0 +1,42 @@
+/* app/assets/stylesheets/users.css.scss */
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .user-table th {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 4px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+  .btn-info {
+    background-color: #3498db;
+  }
+  
+  .btn-warning {
+    background-color: #f39c12;
+  }
+  
+  .btn-danger {
+    background-color: #e74c3c;
+  }
+
+  
