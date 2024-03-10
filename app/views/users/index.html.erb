@@ -1,14 +1,38 @@
-<p style="color: green"><%= notice %></p>
+<!-- app/views/users/index.html.erb -->
 
-<h1>Users</h1>
 
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
-</div>
 
-<%= link_to "New user", new_user_path %>
+<table class="user-table">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>País</th>
+      <th>Ciudad</th>
+      <th>Plataforma</th>
+      <th>Nombre de Usuario</th>
+      <th>Correo Electrónico</th>
+      <th>Acciones</th> <!-- Nueva columna para botones -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.code %></td>
+        <td><%= user.name %></td>
+        <td><%= user.lastname %></td>
+        <td><%= user.country %></td>
+        <td><%= user.city %></td>
+        <td><%= user.platform %></td>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+        <td>
+          <%= link_to 'Ver', user_path(user), class: 'btn btn-info' %>
+          <%= link_to 'Editar', edit_user_path(user), class: 'btn btn-warning' %>
+          <%= link_to 'Eliminar', user_path(user), method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
